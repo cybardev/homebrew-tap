@@ -10,7 +10,7 @@ class Pyrefly < Formula
 
   def install
     # Allow unstable features in stable toolchain
-    ENV["RUSTC_BOOTSTRAP"] = 1
+    ENV["RUSTC_BOOTSTRAP"] = "1"
 
     # Set JEMALLOC configuration for ARM builds
     ENV["JEMALLOC_SYS_WITH_LG_PAGE"] = "16" if Hardware::CPU.arm?
